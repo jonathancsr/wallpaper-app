@@ -38,6 +38,14 @@ const Home = () => {
 	};
 	const handleChangeCategory = (category: string | null) => {
 		setActiveCategory(category);
+		clearSearch();
+		setImages([]);
+		page = 1;
+		let params = {
+			page,
+		};
+		if (category) params.category = category;
+		fetchImages(params, false);
 	};
 
 	const handleSearch = (text: string) => {
