@@ -71,6 +71,7 @@ const styles = StyleSheet.create({
 	flatlistContainer: {
 		paddingHorizontal: wp(4),
 		gap: 8,
+		overflow: "hidden",
 	},
 	category: {
 		padding: 12,
