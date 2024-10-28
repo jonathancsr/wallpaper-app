@@ -10,7 +10,7 @@ const formatUrl = (params) => {
 	const paramsKeys = Object.keys(params);
 	paramsKeys.map((key) => {
 		const value = key === "q" ? encodeURIComponent(params[key]) : params[key];
-		url += `${key}=${value}`;
+		url += `&${key}=${value}`;
 	});
 
 	console.log("final url: ", url);
